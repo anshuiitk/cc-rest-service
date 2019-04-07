@@ -13,8 +13,10 @@ public class CreditCardServiceImpl implements CreditCardService {
 
     @Override
     public List<CreditCard> getAll() {
-        CreditCard creditCard = new CreditCard("AG", "1234 1234 1234 1234", new BigDecimal("5000.00"));
         ArrayList<CreditCard> creditCards = new ArrayList<>();
+        CreditCard creditCard = new CreditCard("AG", "1234 1234 1234 1234", new BigDecimal("5000.00"), new BigDecimal("1000.00"));
+        creditCards.add(creditCard);
+        creditCard = new CreditCard("AG", "1234 1234 1234 5678", new BigDecimal("6000.00"), new BigDecimal("500.00"));
         creditCards.add(creditCard);
         return creditCards;
     }

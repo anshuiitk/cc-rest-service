@@ -16,7 +16,7 @@ public class CreditCardController {
     @Autowired
     private CreditCardServiceImpl creditCardService;
 
-    @RequestMapping("/getAll")
+    @RequestMapping("/api/getAll")
     public List<CreditCard> getAll() {
         return creditCardService.getAll();
     }

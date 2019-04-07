@@ -3,14 +3,17 @@ package com.cc.service.to;
 import java.math.BigDecimal;
 
 public class CreditCard {
+
     private String name;
     private String number;
     private BigDecimal limit;
+    private BigDecimal balance;
 
-    public CreditCard(String name, String number, BigDecimal limit) {
+    public CreditCard(String name, String number, BigDecimal limit, BigDecimal balance) {
         this.name = name;
         this.number = number;
         this.limit = limit;
+        this.balance = balance;
     }
 
     public String getName() {
@@ -35,5 +38,13 @@ public class CreditCard {
 
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 }
