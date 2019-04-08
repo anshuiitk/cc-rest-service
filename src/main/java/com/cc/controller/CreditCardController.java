@@ -1,7 +1,7 @@
-package com.cc.service.controller;
+package com.cc.controller;
 
-import com.cc.service.service.impl.CreditCardServiceImpl;
-import com.cc.service.to.CreditCard;
+import com.cc.service.impl.CreditCardServiceImpl;
+import com.cc.to.CreditCard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,4 +1,4 @@
-package com.cc.service.to;
+package com.cc.to;
 
 import java.math.BigDecimal;
 
@@ -8,6 +8,9 @@ public class CreditCard {
     private String number;
     private BigDecimal limit;
     private BigDecimal balance;
+
+    public CreditCard() {
+    }
 
     public CreditCard(String name, String number, BigDecimal limit, BigDecimal balance) {
         this.name = name;

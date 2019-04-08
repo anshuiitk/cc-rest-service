@@ -1,6 +1,6 @@
-package com.cc.service.service;
+package com.cc.service;
 
-import com.cc.service.to.CreditCard;
+import com.cc.to.CreditCard;
 
 import java.util.List;
 
