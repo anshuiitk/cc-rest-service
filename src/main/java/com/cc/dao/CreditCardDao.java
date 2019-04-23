@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CreditCardDao {
     List<CreditCard> getAll();
+    int add(CreditCard card);
 }

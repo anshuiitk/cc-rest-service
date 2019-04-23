@@ -19,5 +19,5 @@ public interface CreditCardService {
      * @param creditCard
      * @return
      */
-    boolean add(CreditCard creditCard);
+    int add(CreditCard creditCard);
 }

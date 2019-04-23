@@ -20,8 +20,8 @@ public class CreditCardServiceImpl implements CreditCardService {
     }
 
     @Override
-    public boolean add(CreditCard creditCard) {
-        return false;
+    public int add(CreditCard creditCard) {
+        return creditCardDao.add(creditCard);
     }
 
     @Autowired

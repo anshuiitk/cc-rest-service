@@ -3,6 +3,7 @@ package com.cc.dao.impl;
 import com.cc.dao.CreditCardDao;
 import com.cc.to.CreditCard;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -18,18 +19,24 @@ public class CreditCardDaoH2Impl implements CreditCardDao {
 
 
     @Autowired
-    private NamedParameterJdbcTemplate template;
+    private JdbcTemplate template;
 
     @Override
     public List<CreditCard> getAll() {
-        Map<String, Object> params = new HashMap<>();
         String sql = "SELECT * FROM CreditCard";
-        List<CreditCard> result = template.query(sql, params, new UserMapper());
+        List<CreditCard> result = template.query(sql, new UserMapper());
         return result;
     }
 
+    @Override
+    public int add(CreditCard card) {
+        return template.update("insert into card (number, name, limit, balance) " + "values(?, ?, ?, ?)",
+                new Object[] { card.getNumber(), card.getName(), card.getLimit(), card.getBalance() });
+    }
+
+
     @Autowired
-    public void setTemplate(NamedParameterJdbcTemplate template) {
+    public void setTemplate(JdbcTemplate template) {
         this.template = template;
     }
 

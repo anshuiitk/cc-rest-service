@@ -25,7 +25,7 @@ public class CreditCardController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.PUT)
-	public boolean add(@RequestBody CreditCard creditCard) {
+	public int add(@RequestBody CreditCard creditCard) {
 		return creditCardService.add(creditCard);
 	}
 }
