@@ -30,7 +30,7 @@ public class CreditCardDaoH2Impl implements CreditCardDao {
 
     @Override
     public int add(CreditCard card) {
-        return template.update("insert into card (number, name, limit, balance) " + "values(?, ?, ?, ?)",
+        return template.update("insert into CreditCard (number, name, limit, balance) " + "values(?, ?, ?, ?)",
                 new Object[] { card.getNumber(), card.getName(), card.getLimit(), card.getBalance() });
     }
 
