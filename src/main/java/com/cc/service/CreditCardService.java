@@ -1,5 +1,6 @@
 package com.cc.service;
 
+import com.cc.exception.CreditCardAppException;
 import com.cc.to.CreditCard;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public interface CreditCardService {
      * o	for cards not compatible with Luhn 10, return an error
      * @param creditCard
      * @return
+     * @throws CreditCardAppException
      */
-    int add(CreditCard creditCard);
+    void add(CreditCard creditCard) throws CreditCardAppException;
 }

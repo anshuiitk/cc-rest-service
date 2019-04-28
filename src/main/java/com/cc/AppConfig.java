@@ -12,7 +12,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan({"com.cc","hello"})
+@ComponentScan({"com.cc"})
 public class AppConfig {
 
     @Bean

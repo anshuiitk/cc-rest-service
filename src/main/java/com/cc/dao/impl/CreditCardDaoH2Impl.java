@@ -5,18 +5,19 @@ import com.cc.to.CreditCard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;;
 
 @Component
 public class CreditCardDaoH2Impl implements CreditCardDao {
 
+    private final Logger LOGGER = LoggerFactory.getLogger(CreditCardDaoH2Impl.class);
 
     @Autowired
     private JdbcTemplate template;
@@ -30,8 +31,15 @@ public class CreditCardDaoH2Impl implements CreditCardDao {
 
     @Override
     public int add(CreditCard card) {
+        LOGGER.debug("Card Details to be added - {}", card);
         return template.update("insert into CreditCard (number, name, limit, balance) " + "values(?, ?, ?, ?)",
                 new Object[] { card.getNumber(), card.getName(), card.getLimit(), card.getBalance() });
+    }
+
+    @Override
+    public int remove(String number) {
+        return template.update("delete from CreditCard where number = ?",
+                new Object[] { number });
     }
 
 

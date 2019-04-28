@@ -1,4 +1,4 @@
-package hello;
+package com.cc.hello;
 
 public class Greeting {
 

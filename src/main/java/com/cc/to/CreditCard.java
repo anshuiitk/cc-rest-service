@@ -2,8 +2,6 @@ package com.cc.to;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class CreditCard {
 
 	private String name;
@@ -22,6 +20,16 @@ public class CreditCard {
 		this.number = number;
 		this.limit = limit;
 		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "CreditCard{" +
+				"name='" + name + '\'' +
+				", number='" + number + '\'' +
+				", limit=" + limit +
+				", balance=" + balance +
+				'}';
 	}
 
 	public String getName() {
