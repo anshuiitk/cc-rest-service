@@ -1,5 +1,8 @@
 package com.cc.hello;
 
+/**
+ * Sample/Scratch model
+ */
 public class Greeting {
 
     private final long id;

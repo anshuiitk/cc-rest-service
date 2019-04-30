@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Rest Service Interface for the application is defined on this class.
+ * Service calls are then made to delegate functionality.
+ */
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class CreditCardController {

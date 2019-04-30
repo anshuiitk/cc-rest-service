@@ -14,6 +14,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;;
 
+/**
+ * Implementation of {@link CreditCardDao} over H2 in memory database.
+ */
 @Component
 public class CreditCardDaoH2Impl implements CreditCardDao {
 

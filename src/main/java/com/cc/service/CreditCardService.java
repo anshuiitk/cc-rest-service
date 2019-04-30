@@ -18,7 +18,6 @@ public interface CreditCardService {
      * o	New cards start with a £0 balance
      * o	for cards not compatible with Luhn 10, return an error
      * @param creditCard
-     * @return
      * @throws CreditCardAppException
      */
     void add(CreditCard creditCard) throws CreditCardAppException;

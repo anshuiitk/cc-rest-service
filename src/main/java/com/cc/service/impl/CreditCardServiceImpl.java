@@ -11,6 +11,9 @@ import org.springframework.util.Assert;
 
 import java.util.List;
 
+/**
+ * Credit Card servie which also implements luhn 10 check
+ */
 @Component
 public class CreditCardServiceImpl implements CreditCardService {
 

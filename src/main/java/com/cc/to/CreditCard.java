@@ -2,6 +2,9 @@ package com.cc.to;
 
 import java.math.BigDecimal;
 
+/**
+ * Model Object to capture Credit Card information
+ */
 public class CreditCard {
 
 	private String name;
